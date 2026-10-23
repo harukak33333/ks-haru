@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Wedding profile card design | Haruka Kashima</title>
+    <meta
+      name="description"
+      content="UI/UXデザイナー・Webデザイナー、鹿島遥のポートフォリオサイト。WebサイトやデジタルプロダクトのUI/UXデザイン、アートディレクションなど、これまでの制作実績をご紹介します。"
+    />
+    <meta name="auther" content="Haruka Kashima" />
+    <link rel="icon" href="/assets/img/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow, noarchive" />
+    <base href="/en/my-portfolio/" />
+    <meta property="og:image" content="/assets/img/ogp.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Marcellus&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css"
+    />
+    <link rel="stylesheet" href="/assets/css/destyle.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/layout.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+    <main class="l-main c-main">
+      <section class="l-section c-hero">
+        <div class="l-container">
+          <div class="c-hero__heading">
+            <h1 class="c-hero__title">Wedding profile card design</h1>
+            <p class="c-hero__meta">Graphic Design</p>
+          </div>
+          <figure class="c-media c-media--hero">
+            <img src="/assets/img/profilebook-thum.webp" />
+          </figure>
+        </div>
+      </section>
+      <section class="project-content">
+        <article>
+          <h2>Summary</h2>
+          <p>
+            結婚式でゲストに配布する新郎新婦のプロフィールカード、座席表、料理のメニューを制作しました。異なる質感の紙を組み合わせて使用し、新郎新婦からゲストへの手紙をコンセプトに、封筒も合わせてデザインしました。
+          </p>
+        </article>
+        <article>
+          <h2>My Contributions</h2>
+          <p>グラフィックデザイン</p>
+        </article>
+        <article>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a
+                  data-fancybox="gallery"
+                  href="/assets/img/en-profilebook-01.webp"
+                >
+                  <img src="/assets/img/en-profilebook-01.webp" alt="img1" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  data-fancybox="gallery"
+                  href="/assets/img/en-profilebook-02.webp"
+                >
+                  <img src="/assets/img/en-profilebook-02.webp" alt="img2" />
+                </a>
+              </div>
+            </div>
+            <!-- ナビゲーション矢印 -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <div class="arrow-outer">
+      <button id="back-to-top" class="arrow"></button>
+    </div>
+    <footer id="footer"></footer>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/subpage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        keyboard: {
+          enabled: true,
+        },
+      });
+
+      // Fancybox初期化（自動でギャラリー機能ON）
+      Fancybox.bind('[data-fancybox="gallery"]', {
+        keyboard: {
+          Escape: "close",
+          Delete: "close",
+          ArrowRight: "next",
+          ArrowLeft: "prev",
+        },
+        on: {
+          destroy: () => {
+            swiper.keyboard.enable(); // モーダル閉じたらキーボード制御戻す
+          },
+          init: () => {
+            swiper.keyboard.disable(); // モーダル開いてる間はSwiperのキーボードを一時無効
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

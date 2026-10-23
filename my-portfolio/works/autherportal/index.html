@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src="/assets/js/auth.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>著者専用ポータルサイト | Haruka Kashima</title>
+    <meta
+      name="description"
+      content="UI/UXデザイナー・Webデザイナー、鹿島遥のポートフォリオサイト。WebサイトやデジタルプロダクトのUI/UXデザイン、アートディレクションなど、これまでの制作実績をご紹介します。"
+    />
+    <base href="/en/my-portfolio/" />
+    <link rel="icon" href="/assets/img/icon.png" />
+    <meta property="og:image" content="/assets/img/ogp.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Marcellus&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/destyle.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/layout.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+  </head>
+  <body class="theme-autherportal">
+    <header id="header"></header>
+    <!-- ==================================================
+       MAIN
+  ================================================== -->
+    <main class="l-main c-main">
+      <!-- ==================================================
+         HERO
+    ================================================== -->
+      <section class="l-section c-hero">
+        <div class="l-container">
+          <div class="c-hero__heading">
+            <p class="c-hero__category">#UI/UX Design #Web app</p>
+
+            <h1 class="c-hero__title">著者専用ポータルサイト</h1>
+
+            <p class="c-hero__meta">
+              出版作家向けの文書管理をデジタル化するSalesforce Experience
+              Cloudポータル
+            </p>
+          </div>
+
+          <figure class="c-media c-media--hero">
+            <img
+              src="/assets/img/autherportal-kv.png"
+              alt="auther portal"
+              loading="eager"
+            />
+          </figure>
+        </div>
+      </section>
+      <!-- ==================================================
+         PROJECT OVERVIEW
+    ================================================== -->
+      <section class="l-section c-overview">
+        <div class="l-container">
+          <div class="l-grid l-grid--overview">
+            <!-- Summary -->
+            <div class="c-overview__summary">
+              <h2 class="c-heading">Summary</h2>
+
+              <p class="c-text">
+                契約書・請求書・支払明細を一元管理できる、作家向けのデジタルポータル。<br />
+                紙を中心とした従来の事務手続きを、Salesforce Experience
+                Cloud上のより使いやすいデジタル体験へ移行した。<br />
+                リサーチ、必要なコンテンツ、ユーザーフローはクライアント側ですでに定義されていたため、既存のUX方針をもとに、ビジュアルシステムと実装可能なUIへ落とし込むことを担当した。
+              </p>
+            </div>
+
+            <!-- My Role -->
+            <div class="c-overview__role">
+              <h2 class="c-heading">My Role</h2>
+
+              <p class="c-text">UI/UX Designer & Frontend Developer</p>
+              <p class="c-text">
+                初期のUX方針とワイヤーフレームが確定した段階からプロジェクトに参加した。
+              </p>
+              <p class="c-text">担当範囲：</p>
+              <ul class="c-list">
+                <li>既存ワイヤーフレームのブラッシュアップ</li>
+                <li>既存ワイヤーフレームをもとにしたUIシステムの構築</li>
+                <li>全画面およびレスポンシブデザインの設計</li>
+                <li>HTML・CSS・JavaScriptによるフロントエンド実装</li>
+                <li>クライアント側のSalesforce実装チームとの連携</li>
+                <li>Salesforceの技術的制約に合わせたデザイン調整</li>
+              </ul>
+              <p class="c-text">
+                初期ワイヤーフレームは別のUXデザイナーが作成し、その後のUI設計を引き継いだ。実装ではフロントエンド担当者から技術的なアドバイスを受けながら進行した。Salesforceへの実装およびバックエンド連携はクライアント側が担当した。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==================================================
+         THE PROBLEM
+    ================================================== -->
+      <section class="l-section c-split-section c-split-section--problem">
+        <div class="l-container">
+          <div class="l-grid l-grid--split">
+            <div class="c-split-section__content">
+              <h2 class="c-heading c-heading--large">The Problem</h2>
+
+              <p class="c-text">
+                作家は、契約書・請求書・支払明細など、仕事に関わる重要な書類を管理する必要がある。従来の業務は紙を中心とした運用で、一元化されたデジタル体験として設計されていなかった。また、日常的にデジタルサービスを利用しない作家も含まれるため、幅広いデジタルリテラシーに対応する必要があった。
+              </p>
+
+              <p class="c-text">
+                Challenge <br />
+                Salesforce上での使いやすさを保ちながら、出版社独自のブランド性を感じられる、わかりやすく親しみやすいUIをどう設計するか。
+              </p>
+            </div>
+
+            <figure class="c-media c-media--landscape">
+              <img
+                src="/assets/img/autherportal-01.png"
+                alt=""
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+      <!-- ==================================================
+         TARGET USERS
+    ================================================== -->
+      <section class="l-section c-split-section c-split-section--target-users">
+        <div class="l-container">
+          <div class="l-grid l-grid--split">
+            <div class="c-split-section__content">
+              <h2 class="c-heading c-heading--large">Project goals</h2>
+            </div>
+
+            <div class="c-split-section__content">
+              <ul class="c-list">
+                <li>必要な書類をすぐに見つけられるようにする</li>
+                <li>デジタルリテラシーの違いによる認知負荷を減らす</li>
+                <li>書類の種類をまたいで一貫したUIパターンを構築する</li>
+                <li>
+                  デスクトップ・モバイルの両方で快適に利用できるようにする
+                </li>
+                <li>
+                  Salesforceの使いやすさを保ちながら出版社のブランドを表現する
+                </li>
+                <li>
+                  Salesforceの環境に安定して実装できるUIシステムを構築する
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==================================================
+         RESEARCH FINDINGS / DIVIDER
+    ================================================== -->
+      <section class="c-statement c-section-dark">
+        <div class="l-container">
+          <div class="c-statement__inner">
+            <h2 class="c-statement__title">The opportunity</h2>
+
+            <p class="c-statement__text">
+              既存のエンタープライズUIで使われている馴染みのあるパターンをベースとして活用することで、まったく新しい操作方法を学習する負担を減らせると考えた。
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- ==================================================
+         TARGET USER
+    ================================================== -->
+      <section class="l-section c-split-section c-split-section--target-users">
+        <div class="l-container">
+          <div class="l-grid l-grid--split">
+            <div class="c-split-section__content">
+              <h2 class="c-heading">Target Users</h2>
+            </div>
+
+            <div class="c-split-section__content">
+              <p class="c-text">
+                出版社との仕事に関する書類を管理する作家が主なユーザーである。日常的にオンラインの事務サービスを利用する人から、デジタルツールにあまり慣れていない年配の作家まで、さまざまなユーザーが含まれる。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==================================================
+         USER PERSONA
+    ================================================== -->
+      <section class="l-section c-split-section c-split-section--challenge">
+        <div class="l-container">
+          <div class="l-grid l-grid--split">
+            <div class="c-split-section__content">
+              <h3 class="c-heading">
+                Authors managing administrative documents
+              </h3>
+
+              <p class="c-text">主なニーズ：</p>
+              <ul class="c-list">
+                <li>必要な書類をすぐに見つける</li>
+                <li>専門知識がなくても情報を理解する</li>
+                <li>支払いや契約内容を確認する</li>
+                <li>異なるデバイスから快適にアクセスする</li>
+              </ul>
+              <p class="c-text">
+                そのため、明快さ・親しみやすさ・低い認知負荷を優先したUI設計とした。
+              </p>
+            </div>
+
+            <figure class="c-media c-media--landscape">
+              <img
+                src="/assets/img/autherportal-02.png"
+                alt=""
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section class="l-section c-user-flow">
+        <div class="l-container">
+          <h3 class="c-heading">User Flow</h3>
+
+          <figure class="c-media c-media--wide">
+            <img
+              src="/assets/img/autherportal-03.png"
+              alt="User flow diagram"
+              loading="lazy"
+            />
+          </figure>
+
+          <p class="c-caption">
+            全体のユーザーフローと情報設計は、プロジェクト参加時点ですでにクライアント側で定義されていた。そのため、既存のフローをもとに各画面のUI設計とインタラクションを具体化した。
+          </p>
+        </div>
+      </section>
+      <section class="l-section c-split-section c-split-section--prototype">
+        <div class="l-container">
+          <h2 class="c-heading c-heading--large">Design System</h2>
+          <h3 class="c-heading">
+            Building a UI System from Existing Wireframes
+          </h3>
+          <p class="c-text">
+            初期ワイヤーフレームでコンテンツと基本構造が定義されていたため、そこからUIデザインを引き継ぎ、ポータル全体のビジュアルシステムを構築した。
+          </p>
+          <p class="c-text">特に以下の要素の一貫性を重視した。</p>
+          <ul class="c-list">
+            <li>Typography</li>
+            <li>Color</li>
+            <li>Spacing</li>
+            <li>Buttons</li>
+            <li>Cards</li>
+            <li>Tables</li>
+            <li>Form elements</li>
+            <li>Navigation</li>
+            <li>Status indicators</li>
+            <li>Responsive behavior</li>
+          </ul>
+          <p class="c-text">
+            各画面の使い方を事前に学習しなくても内容を理解できることを目指した。
+          </p>
+        </div>
+        <div class="l-container">
+          <div class="l-grid l-grid--split">
+            <div class="c-split-section__content">
+              <h4 class="c-heading c-heading--small">
+                Typography & Information Hierarchy
+              </h4>
+
+              <p class="c-text">
+                管理情報をすばやく読み取る必要があるため、可読性を重要な要素として設計した。
+              </p>
+              <ul class="c-list">
+                <li>明確なタイポグラフィ階層</li>
+                <li>ゆとりのある余白</li>
+                <li>情報のグルーピング</li>
+                <li>一貫したアライメント</li>
+                <li>状態を区別する視覚表現</li>
+              </ul>
+              <p class="c-text">
+                これらにより、システムの構造を理解しなくても必要な情報を直感的に把握できるUIを目指した。
+              </p>
+            </div>
+
+            <figure class="c-media c-media--landscape">
+              <img
+                src="/assets/img/autherportal-04.png"
+                alt="High-fidelity screen"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+        <div class="l-container">
+          <div class="l-grid l-grid--split">
+            <div class="c-split-section__content">
+              <h4 class="c-heading c-heading--small">Responsive Design</h4>
+              <p class="c-text">
+                デスクトップとモバイルの両方で利用できるよう、レスポンシブデザインを設計した。モバイルでは限られた画面領域を有効活用しながら、目的地を認識しやすいナビゲーションを設計した。アイコンとテキストラベルを組み合わせて発見性を維持し、スクロールに応じてナビゲーションを制御することで、画面を圧迫せず必要な操作へアクセスできるようにした。
+              </p>
+            </div>
+            <figure class="c-media c-media--landscape">
+              <img
+                src="/assets/img/autherportal-05.png"
+                alt="High-fidelity screen"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section class="project-section project-section--screens">
+        <div class="screens">
+          <h2 class="screens__title">Hi-Fi Screens</h2>
+
+          <div class="swiper mySwiper screens__slider">
+            <div class="swiper-wrapper">
+              <!-- Screen 01 -->
+              <article class="swiper-slide screen-card">
+                <div class="screen-card__image">
+                  <img
+                    src="/assets/img/autherportal-06.png"
+                    alt="Somna landing screen"
+                  />
+                </div>
+
+                <div class="screen-card__content">
+                  <h3>Dashboard</h3>
+                  <p>
+                    ポータルの主要機能へアクセスするためのシンプルな起点となる画面。システムの構造ではなくユーザーの目的ごとに情報をグルーピングし、必要な場所をすぐに見つけられるようにした。出版社のブランド性も、最初の画面から感じられるように設計した。
+                  </p>
+                </div>
+              </article>
+
+              <!-- Screen 02 -->
+              <article class="swiper-slide screen-card">
+                <div class="screen-card__image">
+                  <img
+                    src="/assets/img/autherportal-07.png"
+                    alt="Somna feeling selection screen"
+                  />
+                </div>
+
+                <div class="screen-card__content">
+                  <h3>Document Lists</h3>
+                  <p>
+                    契約書・請求書・支払明細には共通したリストパターンを採用した。書類の種類が変わっても同じ操作感を維持することで、認知負荷を軽減した。主要な情報をすばやく確認し、必要な書類を選択できる構成とした。
+                  </p>
+                </div>
+              </article>
+
+              <!-- Screen 03 -->
+              <article class="swiper-slide screen-card">
+                <div class="screen-card__image">
+                  <img
+                    src="/assets/img/autherportal-08.png"
+                    alt="Somna Catching Falling Stars activity"
+                  />
+                </div>
+
+                <div class="screen-card__content">
+                  <h3>Onboarding Screens</h3>
+                  <p>
+                    最初のステップで個人情報と連絡先を入力する。プログレスインジケーターによって現在のステップと残りのステップを明確に示した。住所入力では、日本以外の国を選択すると日本固有の住所項目を自動的に無効化し、不要な入力を求めない設計とした。
+                  </p>
+                </div>
+              </article>
+
+              <!-- Screen 04 -->
+              <article class="swiper-slide screen-card">
+                <div class="screen-card__image">
+                  <img
+                    src="/assets/img/autherportal-09.png"
+                    alt="Somna Sand Garden activity"
+                  />
+                </div>
+
+                <div class="screen-card__content">
+                  <h3>Mobile Experience</h3>
+                  <p>
+                    デスクトップと同じ情報階層を維持しながら、モバイルではナビゲーションとコンテンツ量を最適化した。単純にデスクトップのレイアウトを縮小するのではなく、限られた画面サイズでも重要な情報と操作を維持することを重視した。
+                  </p>
+                </div>
+              </article>
+            </div>
+            <!-- SP only -->
+            <!-- ナビゲーション矢印 -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+      <section class="l-section c-split-section c-split-section--target-users">
+        <div class="l-container">
+          <div class="l-grid l-grid--split">
+            <div class="c-split-section__content">
+              <h2 class="c-heading c-heading--large">
+                Frontend Implementation
+              </h2>
+            </div>
+
+            <div class="c-split-section__content">
+              <p class="c-text">
+                承認されたUIデザインをもとに、HTML・CSS・JavaScriptでレスポンシブなフロントエンドを実装した。
+              </p>
+              <p class="c-text">
+                Salesforceチームと密に連携し、Salesforce環境の技術的制約に対応しながら、承認されたデザインシステムとの一貫性を維持した。実装中はフロントエンド担当者から技術的なアドバイスを受け、制約への対応やクライアント側のSalesforce実装との連携を進めた。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="l-section c-split-section c-split-section--target-users">
+        <div class="l-container">
+          <div class="l-grid l-grid--split">
+            <div class="c-split-section__content">
+              <h2 class="c-heading c-heading--large">Results</h2>
+            </div>
+
+            <div class="c-split-section__content">
+              <p class="c-text">
+                契約書・請求書・支払明細を一元管理できるデジタルポータルを構築した。
+              </p>
+              <p class="c-text">最終的なデザインでは、</p>
+              <ul class="c-list">
+                <li>紙を中心とした分散した書類管理をデジタル体験へ移行</li>
+                <li>ポータル全体で一貫したUIパターンを構築</li>
+                <li>異なるデジタルリテラシーに配慮した可読性を実現</li>
+                <li>Salesforce環境に出版社のブランド性を反映</li>
+                <li>デスクトップ・モバイルに対応したレスポンシブUIを実現</li>
+                <li>承認済みのUX構造を実装を見据えたUIシステムへ展開</li>
+              </ul>
+              <p class="c-text">
+                エンタープライズプラットフォームの制約の中でも、UIデザインによって使いやすさとブランド価値を両立できることを示したプロジェクトとなった。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="c-statement c-section-light">
+        <div class="l-container">
+          <div class="c-statement__inner">
+            <h2 class="c-statement__title">
+              明快さを起点に、一貫性を構築し、<br />ユーザーの邪魔をせずにビジュアルデザインで価値を加える。
+            </h2>
+            <p class="c-statement__text">
+              本プロジェクトを通して、実際の技術的制約の中でデザインを成立させる力を磨いた。<br />特に、既存のUX方針やSalesforceというプラットフォームの制約を尊重しながら、UIデザインによって使いやすさとブランド性を高める経験を得た。
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="arrow-outer">
+      <button id="back-to-top" class="arrow"></button>
+    </div>
+    <footer id="footer"></footer>
+    <script src="/assets/js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+      const screensSwiper = new Swiper(".screens__slider", {
+        loop: true,
+
+        keyboard: {
+          enabled: true,
+        },
+
+        navigation: {
+          nextEl: ".screens__slider .swiper-button-next",
+          prevEl: ".screens__slider .swiper-button-prev",
+        },
+
+        breakpoints: {
+          769: {
+            enabled: false,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
