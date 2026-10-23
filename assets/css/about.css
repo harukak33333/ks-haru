@@ -1,0 +1,252 @@
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 6rem;
+}
+
+.marquee__wrapper {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 25s linear infinite;
+  will-change: transform;
+}
+
+.marquee__text {
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding-right: 4rem;
+  font-size: 6.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  background: linear-gradient(180deg, #f3e49f, #9ecdd8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ==================================================
+   ABOUT PAGE
+================================================== */
+
+.about-page {
+  width: 100%;
+  /* padding: 8rem 8.7vw 10rem; */
+  /* padding-bottom: 10rem; */
+}
+
+
+.about-page .c-hero {
+  padding-bottom: 6rem;
+}
+
+/* ==================================================
+   ABOUT LAYOUT
+================================================== */
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  column-gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* ==================================================
+   INTRO
+================================================== */
+
+.about-intro {
+  align-self: start;
+}
+
+.about-intro__text {
+  max-width: 450px;
+}
+
+.about-intro__text p {
+  margin: 0 0 3.2rem;
+}
+
+.about-intro__text p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ==================================================
+   SECTION
+================================================== */
+
+.about-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.about-section {
+  width: 100%;
+}
+
+
+/* ==================================================
+   HEADING
+================================================== */
+
+.about-page .c-heading--large {
+  margin: 0 0 1.4rem;
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+
+/* ==================================================
+   LIST
+================================================== */
+
+.about-list {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.about-list__item {
+  display: grid;
+  grid-template-columns: 12rem minmax(0, 1fr);
+  column-gap: 2rem;
+
+  margin: 0;
+  /* padding: 0 0 1.2rem; */
+
+  list-style: none;
+}
+
+.about-list__year,
+.about-list__content {
+  display: block;
+}
+
+.about-list__year {
+  white-space: nowrap;
+}
+
+.about-list__content {
+  min-width: 0;
+}
+
+
+/* ==================================================
+   LANGUAGE
+================================================== */
+
+.about-list--language {
+  max-width: 430px;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+  .about-page {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .about-layout {
+    column-gap: 5rem;
+  }
+
+  .about-list__item {
+    grid-template-columns: 10rem minmax(0, 1fr);
+    column-gap: 1.5rem;
+  }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+
+  .about-page {
+    padding: 8rem 2rem 6rem;
+  }
+
+  .about-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+  .about-intro__text {
+    max-width: none;
+  }
+
+  .about-details {
+    gap: 4.5rem;
+  }
+
+  .about-page .c-heading--large {
+    font-size: 2.8rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .about-list__item {
+    grid-template-columns: 10rem minmax(0, 1fr);
+    column-gap: 1.5rem;
+  }
+
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 420px) {
+
+  .about-page {
+    padding: 7rem 2rem 5rem;
+  }
+
+  .about-layout {
+    gap: 5rem;
+  }
+
+  .about-details {
+    gap: 4rem;
+  }
+
+  .about-page .c-heading--large {
+    font-size: 2.6rem;
+  }
+
+  .about-intro__text p {
+    margin-bottom: 2.8rem;
+  }
+
+  .about-list__item {
+    grid-template-columns: 8.5rem minmax(0, 1fr);
+    column-gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+}

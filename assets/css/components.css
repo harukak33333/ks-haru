@@ -1,0 +1,1292 @@
+/* ==================================================
+   components.css
+   Component / Typography / Visual Style
+================================================== */
+
+
+/* ==================================================
+   01. DESIGN TOKENS
+================================================== */
+
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-black: #111111;
+  --color-text: #333333;
+  --color-text-light: #666666;
+  --color-text-muted: #888888;
+
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #eeeeee;
+  --color-gray-300: #dddddd;
+  --color-gray-400: #cccccc;
+
+  --color-border: #dddddd;
+
+  --color-primary: #0088bf;
+  --color-accent: #8ac3ca;
+
+  --color-link: #0088BF;
+
+  --color-background: #ffffff;
+  --color-surface: #f5f5f5;
+
+  --color-text: #333333;
+  --color-heading: #111111;
+
+  /* Typography */
+  --font-sans:
+    "Montserrat",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-md: 18px;
+  --font-size-lg: 24px;
+  --font-size-xl: 32px;
+  --font-size-xxl: 40px;
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.9;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.04em;
+
+  /* Border */
+  --border-width: 1px;
+
+  /* Radius */
+  --radius-none: 0;
+  --radius-small: 2px;
+  --radius-round: 50%;
+
+  /* Transition */
+  --transition-default:
+    0.3s ease;
+}
+
+.c-main {
+  padding-top: 60px;
+}
+
+
+/* ==================================================
+   02. BASE TYPOGRAPHY
+================================================== */
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text);
+  background-color: var(--color-white);
+  letter-spacing: var(--letter-spacing-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+
+/* ==================================================
+   03. HEADING
+================================================== */
+
+.c-heading {
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-black);
+  margin-bottom: 0.8rem;
+}
+
+.c-heading+.c-heading {
+  margin-top: 4rem;
+}
+
+.c-heading--large {
+  font-size: var(--font-size-xxl);
+  font-weight: 500;
+  line-height: var(--line-height-tight);
+}
+
+.c-heading--small {
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  line-height: var(--line-height-tight);
+}
+
+
+/* ==================================================
+   04. TEXT
+================================================== */
+
+.c-text {
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--color-text);
+}
+
+.c-text+.c-text {
+  margin-top: 14px;
+}
+
+.c-list+.c-text {
+  margin-top: 14px;
+}
+
+/* ==================================================
+   05. LINK
+================================================== */
+
+.c-link {
+  position: relative;
+  display: inline-block;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: var(--color-link);
+  text-decoration: underline;
+  transition:
+    opacity var(--transition-default);
+}
+
+.c-link:hover {
+  text-decoration: none;
+  opacity: 1;
+}
+
+.c-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+
+/* ==================================================
+   06. HERO
+================================================== */
+
+.c-hero__category {
+  margin-bottom: 6px;
+  font-size: var(--font-size-base);
+  line-height: 1.4;
+  color: var(--color-text-light);
+}
+
+.c-hero__title {
+  font-size: var(--font-size-xxl);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-black);
+}
+
+.c-hero__meta {
+  margin-top: 8px;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+
+/* ==================================================
+   07. MEDIA BASE
+================================================== */
+
+.c-media {
+  overflow: hidden;
+  /* background-color: var(--color-gray-300); */
+  margin: auto;
+}
+
+.c-media img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+/* ==================================================
+   08. MEDIA - HERO
+================================================== */
+
+/* .c-media--hero {
+  aspect-ratio: 16 / 7;
+} */
+
+.c-media--hero img {
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover;
+}
+
+
+/* ==================================================
+   09. MEDIA - LANDSCAPE
+================================================== */
+
+/* .c-media--landscape {
+  aspect-ratio: 4 / 3;
+} */
+
+.c-media--landscape img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ==================================================
+   10. MEDIA - SQUARE
+================================================== */
+
+.c-media--square {
+  aspect-ratio: 1 / 1;
+  max-width: 140px;
+}
+
+.c-media--square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ==================================================
+   11. MEDIA - WIDE
+================================================== */
+
+/* .c-media--wide {
+  aspect-ratio: 16 / 7;
+} */
+
+.c-media--wide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ==================================================
+   12. MEDIA - GALLERY
+================================================== */
+
+.c-media--gallery {
+  aspect-ratio: 4 / 3;
+}
+
+.c-media--gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ==================================================
+   13. OVERVIEW
+================================================== */
+
+.c-overview__summary,
+.c-overview__links,
+.c-overview__role {
+  color: var(--color-text);
+}
+
+/* .c-overview__summary .c-text {
+  max-width: 520px;
+} */
+
+.c-overview__links {
+  justify-self: start;
+}
+
+/* .c-overview__role .c-text {
+  max-width: 520px;
+} */
+
+
+/* ==================================================
+   14. RESEARCH CARD
+================================================== */
+
+.c-card {
+  background-color: var(--color-primary);
+}
+
+.c-card--research {
+  padding: 24px;
+  border-radius: 0.6rem;
+}
+
+.c-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-black);
+}
+
+.c-card__text {
+  margin-top: 10px;
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+
+/* ==================================================
+   15. STATEMENT
+================================================== */
+
+.c-statement {
+  background-color: var(--color-primary);
+}
+
+.c-statement__title {
+  font-size: var(--font-size-xxl);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-black);
+}
+
+.c-statement__text {
+  font-size: var(--font-size-base);
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+.c-split-section--problem {
+  background-color: var(--color-secondery);
+  margin-bottom: 10rem;
+
+}
+
+
+/* ==================================================
+   16. COMPETITOR
+================================================== */
+
+.c-competitor {
+  min-width: 0;
+}
+
+.c-competitor__title {
+  margin-top: 16px;
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-black);
+}
+
+.c-competitor .c-text {
+  margin-top: 10px;
+}
+
+
+/* ==================================================
+   17. PERSON / USER FEEDBACK
+================================================== */
+
+.c-person {
+  text-align: center;
+}
+
+.c-person__avatar {
+  width: 120px;
+  aspect-ratio: 1 / 1;
+  margin-inline: auto;
+  overflow: hidden;
+  border-radius: var(--radius-round);
+  background-color: var(--color-gray-300);
+}
+
+.c-person__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c-person__quote {
+  max-width: 220px;
+  margin: 20px auto 0;
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+
+/* ==================================================
+   18. RESEARCH SUMMARY
+================================================== */
+
+.c-summary-item {
+  min-width: 0;
+}
+
+.c-summary-item__title {
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-black);
+}
+
+.c-summary-item .c-text {
+  margin-top: 10px;
+}
+
+
+/* ==================================================
+   19. SECTION SPLIT
+================================================== */
+
+.c-split-section__content {
+  color: var(--color-text);
+}
+
+
+/* ==================================================
+   20. CHALLENGE / FINDINGS MEDIA
+================================================== */
+/* 
+.c-split-section--challenge .c-media,
+.c-split-section--findings .c-media {
+  background-color: var(--color-gray-300);
+} */
+
+
+/* ==================================================
+   21. GALLERY
+================================================== */
+
+.c-gallery {
+  background-color: var(--color-white);
+}
+
+
+/* ==================================================
+   22. SECTION BREAK
+================================================== */
+
+.c-section-break {
+  background-color: var(--color-gray-100);
+}
+
+
+/* ==================================================
+   23. USER FLOW
+================================================== */
+
+/* .c-user-flow .c-media {
+  background-color: var(--color-gray-300);
+} */
+
+.c-caption {
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+
+/* ==================================================
+   24. IDEA CARD
+================================================== */
+
+.c-card--idea {
+  background-color: transparent;
+}
+
+/* .c-card--idea .c-media {
+  background-color: var(--color-gray-300);
+} */
+
+.c-card--idea .c-card__title {
+  margin-top: 1.6rem;
+}
+
+
+/* ==================================================
+   25. TESTING
+================================================== */
+
+.c-testing__content {
+  min-width: 0;
+}
+
+
+/* ==================================================
+   26. USABILITY TESTING
+================================================== */
+
+.c-test-user {
+  min-width: 0;
+  text-align: center;
+}
+
+.c-test-user__avatar {
+  width: 80px;
+  aspect-ratio: 1 / 1;
+  margin-inline: auto;
+  overflow: hidden;
+  border-radius: var(--radius-round);
+  background-color: var(--color-gray-300);
+}
+
+.c-test-user__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c-test-user__text {
+  margin-top: 14px;
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+
+/* ==================================================
+   27. PROTOTYPE
+================================================== */
+
+/* .c-split-section--prototype .c-media {
+  background-color: var(--color-gray-300);
+} */
+
+
+/* ==================================================
+   28. FINAL STATEMENT
+================================================== */
+
+.c-statement--final {
+  background-color: var(--color-gray-100);
+}
+
+/* ==================================================
+   LIST
+================================================== */
+
+/* ---------- Unordered List ---------- */
+
+.c-list {
+  padding-left: 2.4rem;
+}
+
+.c-list li {
+  list-style: disc;
+  padding-left: 0.4rem;
+}
+
+.c-list li::marker {
+  color: var(--color-primary);
+}
+
+
+/* ---------- Ordered List ---------- */
+
+.c-list--number {
+  padding-left: 2.4rem;
+  counter-reset: list-counter;
+  list-style: none;
+}
+
+.c-list--number>li {
+  position: relative;
+  list-style: none;
+  counter-increment: list-counter;
+  padding-left: 0.4rem;
+}
+
+.c-list--number>li::marker {
+  color: var(--color-primary);
+}
+
+.c-list--number>li::before {
+  content: counter(list-counter) ".";
+  position: absolute;
+  left: -2.8rem;
+  width: 2.4rem;
+  text-align: right;
+  color: var(--color-primary);
+}
+
+/* ==================================================
+   29. RESPONSIVE - TABLET
+================================================== */
+
+@media (max-width: 1100px) {
+
+  :root {
+    --font-size-xl: 26px;
+    --font-size-lg: 17px;
+  }
+
+  .c-main {
+    padding-top: 40px;
+  }
+
+  /* Hero */
+
+  .c-hero__title {
+    font-size: var(--font-size-xl);
+  }
+
+
+  /* User */
+
+  .c-person__avatar {
+    width: 100px;
+  }
+
+
+  /* Testing */
+
+  .c-test-user__avatar {
+    width: 70px;
+  }
+
+}
+
+
+/* ==================================================
+   30. RESPONSIVE - MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+
+  :root {
+    --font-size-xs: 12px;
+    --font-size-sm: 12px;
+    --font-size-base: 14px;
+    --font-size-md: 16px;
+    --font-size-lg: 20px;
+    --font-size-xl: 24px;
+    --font-size-xxl: 32px;
+  }
+
+
+  /* ----------------------------------------------
+     Base
+  ---------------------------------------------- */
+
+  body {
+    font-size: var(--font-size-base);
+  }
+
+
+  /* ----------------------------------------------
+     Heading
+  ---------------------------------------------- */
+
+  .c-heading {
+    font-size: var(--font-size-xl);
+  }
+
+  .c-heading--small {
+    font-size: var(--font-size-xl);
+  }
+
+
+  /* ----------------------------------------------
+     Text
+  ---------------------------------------------- */
+
+  .c-text {
+    font-size: var(--font-size-base);
+    line-height: 1.8;
+  }
+
+
+  /* ----------------------------------------------
+     Hero
+  ---------------------------------------------- */
+
+  .c-hero__category {
+    font-size: var(--font-size-base);
+  }
+
+  .c-hero__title {
+    font-size: var(--font-size-xxl);
+    line-height: 1.25;
+  }
+
+  .c-hero__meta {
+    font-size: var(--font-size-base);
+  }
+
+  /* .c-media--hero {
+    aspect-ratio: 16 / 9;
+  } */
+
+
+  /* ----------------------------------------------
+     Overview
+  ---------------------------------------------- */
+
+  .c-overview__links {
+    margin-top: 0;
+  }
+
+
+  /* ----------------------------------------------
+     Research Card
+  ---------------------------------------------- */
+
+  .c-card--research {
+    padding: 18px;
+  }
+
+  .c-card__title {
+    font-size: var(--font-size-lg);
+  }
+
+  .c-card__text {
+    font-size: var(--font-size-base);
+    line-height: 1.7;
+  }
+
+
+  /* ----------------------------------------------
+     Statement
+  ---------------------------------------------- */
+
+  .c-statement__title {
+    font-size: var(--font-size-xxl);
+  }
+
+  .c-statement__text {
+    font-size: var(--font-size-base);
+    line-height: 1.8;
+  }
+
+
+  /* ----------------------------------------------
+     Competitor
+  ---------------------------------------------- */
+
+  .c-competitor__title {
+    margin-top: 1.2rem;
+  }
+
+
+  /* ----------------------------------------------
+     User Feedback
+  ---------------------------------------------- */
+
+  .c-person__avatar {
+    width: 90px;
+  }
+
+  .c-person__quote {
+    max-width: 280px;
+    margin-top: 1.4rem;
+    font-size: var(--font-size-base);
+  }
+
+
+  /* ----------------------------------------------
+     Research Summary
+  ---------------------------------------------- */
+
+  .c-summary-item__title {
+    font-size: var(--font-size-lg);
+  }
+
+
+  /* ----------------------------------------------
+     Gallery
+  ---------------------------------------------- */
+
+  .c-media--gallery {
+    aspect-ratio: 4 / 3;
+  }
+
+
+  /* ----------------------------------------------
+     User Flow
+  ---------------------------------------------- */
+
+  .c-caption {
+    font-size: var(--font-size-sm);
+  }
+
+
+  /* ----------------------------------------------
+     Idea
+  ---------------------------------------------- */
+
+  .c-card--idea .c-card__title {
+    margin-top: 1.2rem;
+  }
+
+
+  /* ----------------------------------------------
+     Testing
+  ---------------------------------------------- */
+
+  .c-test-user__avatar {
+    width: 80px;
+  }
+
+  .c-test-user__text {
+    font-size: var(--font-size-base);
+  }
+
+}
+
+
+/* ==================================================
+   31. RESPONSIVE - SMALL MOBILE
+================================================== */
+
+@media (max-width: 480px) {
+
+  :root {
+    --font-size-xl: 22px;
+    --font-size-lg: 16px;
+    --font-size-md: 13px;
+  }
+
+
+  .c-hero__title {
+    font-size: var(--font-size-xxl);
+  }
+
+
+  .c-person__avatar {
+    width: 80px;
+  }
+
+
+  .c-test-user__avatar {
+    width: 72px;
+  }
+
+}
+
+/* =========================================================
+   HI-FI SCREENS
+   PC: Grid
+   SP: Swiper
+========================================================= */
+
+.project-section--screens {
+  width: 100%;
+}
+
+.screens {
+  width: 100%;
+  padding: 7rem 5rem 8rem;
+  background-color: var(--color-accent);
+}
+
+.screens__title {
+  max-width: 1280px;
+  margin: 0 auto 4rem;
+
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* SLIDER / GRID CONTAINER */
+
+.screens__slider {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  overflow: visible;
+  box-shadow: none;
+}
+
+
+/* PC
+   SwiperをGridとして使用 */
+
+@media (min-width: 769px) {
+
+
+  .screens__slider .swiper-wrapper {
+    display: grid !important;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4rem 7rem;
+
+    width: 100% !important;
+    height: auto !important;
+
+    transform: none !important;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .screens__slider .swiper-slide {
+    display: block;
+
+    width: auto !important;
+    height: auto !important;
+
+    flex-shrink: 1 !important;
+
+    margin: 0 !important;
+    padding: 0;
+
+    transform: none !important;
+  }
+
+  .screens__slider .swiper-pagination {
+    display: none !important;
+  }
+
+
+  .screens__slider .swiper-button-next,
+  .screens__slider .swiper-button-prev {
+    display: none !important;
+  }
+}
+
+/* SCREEN CARD */
+
+.screen-card {
+  min-width: 0;
+
+  text-align: center;
+}
+
+/* Image */
+
+.screen-card__image {
+  width: 200px;
+  max-width: 100%;
+
+  margin: 0 auto 1.8rem;
+
+  overflow: hidden;
+  border-radius: 0.8rem;
+}
+
+.screen-card__image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  margin: 0;
+}
+
+
+/* Text */
+
+.screen-card__content {
+  width: 100%;
+  max-width: 320px;
+
+  margin: 0 auto;
+}
+
+.screen-card__content h3 {
+  margin: 0 0 1.4rem;
+
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.screen-card__content p {
+  margin: 0;
+
+  font-size: 1.6rem;
+  line-height: 1.7;
+}
+
+
+/* SP
+   768px以下ではSwiper */
+
+@media (max-width: 768px) {
+
+  .screens {
+    padding: 5rem 0 6rem;
+  }
+
+
+  /* Title */
+
+  .screens__title {
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+
+    font-size: 2.8rem;
+  }
+
+  /* Swiper */
+
+  .screens__slider {
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+    padding-bottom: 4rem;
+
+    overflow: hidden;
+
+    box-shadow: none;
+  }
+
+  .screens__slider .swiper-wrapper {
+    display: flex !important;
+
+    width: 100% !important;
+    height: auto !important;
+
+    gap: 0;
+
+    transform: none;
+  }
+
+  .screens__slider .swiper-slide {
+    display: block;
+
+    width: 100% !important;
+    height: auto !important;
+
+    flex-shrink: 0 !important;
+
+    margin: 0 !important;
+    padding: 0;
+
+    transform: none;
+  }
+
+
+  /* Card */
+
+  .screen-card {
+    width: 100%;
+    padding: 0 3rem;
+  }
+
+
+  /* Image */
+
+  .screen-card__image {
+    width: 200px;
+    max-width: 70vw;
+
+    margin: 0 auto 2rem;
+  }
+
+
+  /* Text */
+
+  .screen-card__content {
+    max-width: 340px;
+  }
+
+  .screen-card__content h3 {
+    margin-bottom: 1.2rem;
+
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+
+  .screen-card__content p {
+    font-size: 1.5rem;
+    line-height: 1.7;
+  }
+
+
+  /* Pagination */
+
+  .screens__slider .swiper-pagination {
+    display: block;
+    bottom: 0;
+  }
+
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 420px) {
+
+  .screens {
+    padding-top: 4rem;
+  }
+
+  .screens__title {
+    font-size: 2.6rem;
+  }
+
+  .screen-card {
+    padding: 0 2rem;
+  }
+
+  .screen-card__image {
+    width: 190px;
+  }
+
+  .screen-card__content h3 {
+    font-size: 1.8rem;
+  }
+
+  .screen-card__content p {
+    font-size: 1.4rem;
+  }
+
+}
+
+/* ==================================================
+    PAGE CUSTOMIZE
+================================================== */
+
+/* SOMNA */
+
+.theme-somna {
+  --color-primary: #2C347C;
+  --color-secondery: #BFBFE6;
+  --color-accent: #ddddff;
+
+  --color-background: #ffffff;
+  --color-surface: #f3f5f8;
+
+  --color-text: #3d4148;
+  --color-heading: #252a32;
+}
+
+.theme-somna .c-section-dark {
+  --color-primary: #2C347C;
+  --color-black: #DFE6EE;
+  --color-text: #DFE6EE;
+
+}
+
+.theme-somna .c-section-light {
+  --color-primary: #DFE0FF;
+  --color-black: #333333;
+  --color-text: #333333;
+
+}
+
+.theme-somna .c-user-flow, .theme-somna .l-section.c-competitors {
+  padding-top: 0;
+}
+
+.theme-somna .l-grid.l-grid--cards-2 {
+  margin-top: 0;
+}
+
+.somna-video figure {
+  aspect-ratio: 1200 / 675;
+}
+
+.somna-video figure video {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  aspect-ratio: 16 / 10;
+
+  object-fit: contain;
+}
+
+/* SOKO */
+
+.theme-soko {
+  --color-primary: #004695;
+  --color-secondery: #EBF0FF;
+  --color-accent: #b7c5da;
+
+  --color-background: #ffffff;
+  --color-surface: #f3f5f8;
+
+  --color-text: #3d4148;
+  --color-heading: #252a32;
+}
+
+.theme-soko .c-section-dark {
+  --color-primary: #004695;
+  --color-black: #DFE6EE;
+  --color-text: #DFE6EE;
+
+}
+
+.theme-soko .c-section-light {
+  --color-primary: #EBF0FF;
+  --color-black: #333333;
+  --color-text: #333333;
+}
+
+.theme-soko .c-media {
+  height: 100%;
+}
+
+/* autherportal */
+
+.theme-autherportal {
+  --color-primary: #001A70;
+  --color-secondery: #D8E1FE;
+  --color-accent: #E7ECFF;
+
+  --color-background: #ffffff;
+  --color-surface: #f3f5f8;
+
+  --color-text: #3d4148;
+  --color-heading: #252a32;
+}
+
+.theme-autherportal .c-section-dark {
+  /* --color-primary: #004695; */
+  --color-black: #DFE6EE;
+  --color-text: #DFE6EE;
+
+}
+
+.theme-autherportal .c-section-light {
+  --color-primary: #EBF0FF;
+  --color-black: #333333;
+  --color-text: #333333;
+}
+
+.theme-autherportal .screens__slider .swiper-wrapper {
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.theme-autherportal .screen-card__image {
+  width: 100%;
+  border-radius: 0;
+}
+
+.theme-autherportal .screen-card__content {
+  max-width: none;
+}
+
+.theme-autherportal .screen-card__content p {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .theme-autherportal .screens__slider {
+    padding-bottom: 0;
+  }
+
+  .theme-autherportal .screens__slider .swiper-slide {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    padding: 0 2.4rem;
+    transform: none;
+  }
+}

@@ -1,0 +1,907 @@
+/* ==================================================
+   layout.css
+   Layout / Grid / Responsive
+================================================== */
+
+
+/* ==================================================
+   01. RESET
+================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* a {
+  color: inherit;
+  text-decoration: none;
+} */
+
+
+/* ==================================================
+   02. ROOT / MAIN
+================================================== */
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.l-main {
+  width: 100%;
+}
+
+#header,
+#footer {
+  width: 100%;
+}
+
+
+/* ==================================================
+   03. CONTAINER
+================================================== */
+
+/*
+  Desktop
+  ───────────────────────────────
+  コンテンツ最大幅を設定し、
+  左右にauto marginを入れる。
+
+  Mobile
+  ───────────────────────────────
+  横paddingを小さくして
+  画面いっぱいに近いレイアウトにする。
+*/
+
+.l-container {
+  width: min(100% - 10rem, 1200px);
+  margin-inline: auto;
+}
+
+.l-container+.l-container {
+  margin-top: 4rem;
+}
+
+/* ==================================================
+   04. SECTION
+================================================== */
+
+.l-section {
+  width: 100%;
+  padding-block: 80px;
+}
+
+
+/*
+  Section内でcontainerを使わない場合にも
+  全幅を維持するための基本設定
+*/
+
+.l-section>* {
+  min-width: 0;
+}
+
+
+/* ==================================================
+   05. GRID BASE
+================================================== */
+
+.l-grid {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* ==================================================
+   06. GRID - OVERVIEW
+================================================== */
+
+/*
+  Project Overview
+
+  PC:
+  ┌──────────────────────┬──────────────┐
+  │ Summary              │ Links        │
+  ├──────────────────────┼──────────────┤
+  │ My Role              │              │
+  └──────────────────────┴──────────────┘
+
+  HTML上は3要素なので、
+  grid-template-columnsで配置を管理。
+*/
+
+.l-grid--overview {
+  grid-template-columns: minmax(0, 2fr) minmax(180px, 1fr);
+  column-gap: 4rem;
+  row-gap: 4rem;
+}
+
+
+/* ==================================================
+   07. GRID - SPLIT
+================================================== */
+
+/*
+  2カラムの基本レイアウト
+
+  PC:
+  ┌─────────────────┬─────────────────┐
+  │                 │                 │
+  │     Content     │      Image      │
+  │                 │                 │
+  └─────────────────┴─────────────────┘
+
+  SP:
+  ┌─────────────────┐
+  │     Content     │
+  ├─────────────────┤
+  │      Image      │
+  └─────────────────┘
+*/
+
+.l-grid--split {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 4rem;
+  align-items: start;
+}
+
+
+/* ==================================================
+   08. GRID - SECTION INTRO
+================================================== */
+
+/*
+  見出し + 説明文
+
+  PC:
+  [Heading]       [Text]
+
+  SP:
+  [Heading]
+  [Text]
+*/
+
+.l-grid--section-intro {
+  grid-template-columns: minmax(220px, 1fr) minmax(0, 2fr);
+  gap: 4rem;
+  align-items: start;
+}
+
+
+/* ==================================================
+   09. GRID - 2 COLUMNS
+================================================== */
+
+.l-grid--cards-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 4.8rem;
+}
+
+
+/* ==================================================
+   10. GRID - 3 COLUMNS
+================================================== */
+
+.l-grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+}
+
+
+/* ==================================================
+   11. GRID - 5 COLUMNS
+================================================== */
+
+.l-grid--5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 24px;
+}
+
+
+/* ==================================================
+   12. MEDIA LAYOUT
+================================================== */
+
+/*
+  画像コンポーネントの親要素が
+  Gridによって潰れないようにする。
+*/
+
+.c-media {
+  width: 100%;
+  min-width: 0;
+}
+
+.c-media img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* ==================================================
+   13. HERO LAYOUT
+================================================== */
+
+.c-hero {
+  width: 100%;
+  padding-top: 6rem;
+  padding-bottom: 10rem;
+}
+
+.c-hero__heading {
+  width: 100%;
+  margin-bottom: 2.4rem;
+}
+
+.c-media--hero {
+  width: 100%;
+}
+
+
+/* ==================================================
+   14. OVERVIEW LAYOUT
+================================================== */
+
+.c-overview {
+  padding-top: 0;
+  padding-bottom: 10rem;
+}
+
+.c-overview__summary,
+.c-overview__links,
+.c-overview__role {
+  min-width: 0;
+}
+
+
+/*
+  Roleを2段目に配置
+*/
+
+.c-overview__role {
+  grid-column: 1 / 2;
+}
+
+
+/* ==================================================
+   15. SPLIT SECTION
+================================================== */
+
+.c-split-section {
+  width: 100%;
+}
+
+.c-split-section__content {
+  min-width: 0;
+}
+
+
+/*
+  Problem section
+*/
+
+.c-split-section--problem {
+  padding: 0;
+}
+
+.c-split-section--problem .c-split-section__content {
+  padding-block: 5.6rem;
+}
+
+.c-split-section--problem .c-media {
+  height: 100%;
+}
+
+
+/*
+  Target Users
+*/
+
+.c-split-section--target-users {
+  padding-block: 8rem;
+}
+
+
+/*
+  Challenge / Findings
+*/
+
+.c-split-section--challenge,
+.c-split-section--findings {
+  padding-block: 10rem;
+}
+
+
+/*
+  Prototype
+*/
+
+.c-split-section--prototype {
+  padding-block: 8rem;
+}
+
+
+/* ==================================================
+   16. RESEARCH OBJECTIVES
+================================================== */
+
+.c-research-objectives {
+  padding-block: 10rem;
+}
+
+
+/* ==================================================
+   17. STATEMENT / SECTION BREAK
+================================================== */
+
+.c-statement {
+  width: 100%;
+  padding-block: 7rem;
+}
+
+.c-statement__inner {
+  width: min(100%, 1200px);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.c-statement__title {
+  margin-bottom: 2rem;
+}
+
+.c-statement__text {
+  /* max-width: 680px; */
+  margin-inline: auto;
+}
+
+.c-statement--final {
+  padding-block: 8rem;
+}
+
+
+/* ==================================================
+   18. COMPETITORS
+================================================== */
+
+.c-competitors {
+  padding-block: 10rem;
+}
+
+.c-competitors .l-grid--3 {
+  margin-top: 5rem;
+}
+
+
+/* ==================================================
+   19. USER FEEDBACK
+================================================== */
+
+.c-user-feedback {
+  padding-block: 10rem;
+}
+
+.c-user-feedback .l-grid--3 {
+  margin-top: 6rem;
+}
+
+
+/* ==================================================
+   20. RESEARCH SUMMARY
+================================================== */
+
+.c-research-summary {
+  padding-block: 8rem;
+}
+
+.c-research-summary .l-grid--3 {
+  margin-top: 5rem;
+}
+
+
+/* ==================================================
+   21. TARGET USERS
+================================================== */
+
+.c-split-section--target-users .l-grid--split {
+  align-items: start;
+}
+
+
+/* ==================================================
+   22. CHALLENGES / FINDINGS
+================================================== */
+
+/* .c-split-section--challenge .l-grid--split,
+.c-split-section--findings .l-grid--split {
+  align-items: center;
+} */
+
+
+/* ==================================================
+   23. RESEARCH GALLERY
+================================================== */
+
+.c-gallery {
+  padding-block: 6rem;
+}
+
+.c-gallery .l-grid--3 {
+  gap: 2rem;
+}
+
+
+/* ==================================================
+   24. SECTION BREAK
+================================================== */
+
+.c-section-break {
+  width: 100%;
+  height: 180px;
+}
+
+
+/* ==================================================
+   25. PROJECT GOALS
+================================================== */
+
+.c-project-goals {
+  padding-block: 10rem;
+}
+
+
+/* ==================================================
+   26. USER FLOW
+================================================== */
+
+.c-user-flow {
+  padding-block: 8rem;
+}
+
+.c-user-flow .c-media--wide {
+  margin-top: 5rem;
+}
+
+.c-caption {
+  width: 100%;
+  text-align: center;
+  margin-top: 1.6rem;
+}
+
+
+/* ==================================================
+   27. IDEAS
+================================================== */
+
+.c-ideas {
+  padding-block: 10rem;
+}
+
+.c-ideas .l-grid--3 {
+  margin-top: 5rem;
+}
+
+
+/* ==================================================
+   28. TESTING
+================================================== */
+
+.c-testing {
+  padding-block: 8rem;
+}
+
+
+/* ==================================================
+   29. USABILITY TESTING
+================================================== */
+
+.c-usability-testing {
+  padding-block: 10rem;
+}
+
+.c-usability-testing .l-grid--5 {
+  margin-top: 6rem;
+}
+
+
+/* ==================================================
+   30. PROTOTYPE
+================================================== */
+
+.c-split-section--prototype .l-grid--split {
+  align-items: start;
+}
+
+
+/* ==================================================
+   31. GENERAL COMPONENT WIDTH
+================================================== */
+
+/*
+  長い文章が画面いっぱいに広がらないようにする。
+  components.cssでfont-sizeなどを設定する前提。
+*/
+
+.c-text {
+  max-width: 720px;
+}
+
+
+/* ==================================================
+   32. MOBILE
+================================================== */
+
+@media (max-width: 767px) {
+
+  /* ----------------------------------------------
+     Container
+  ---------------------------------------------- */
+
+  .l-container {
+    width: calc(100% - 4.8rem);
+    max-width: none;
+  }
+
+
+  /* ----------------------------------------------
+     Section
+  ---------------------------------------------- */
+
+
+
+  /* ----------------------------------------------
+     Grid Base
+  ---------------------------------------------- */
+
+  .l-grid {
+    width: 100%;
+  }
+
+
+  /* ----------------------------------------------
+     Overview
+  ---------------------------------------------- */
+
+  .l-grid--overview {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+  }
+
+  .c-overview__role {
+    grid-column: auto;
+  }
+
+
+  /* ----------------------------------------------
+     Split
+  ---------------------------------------------- */
+
+  .l-grid--split {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+  }
+
+
+  /*
+    SPでは基本的に
+    Content → Image
+    の順番にする。
+  */
+
+  .c-split-section__content {
+    order: 1;
+  }
+
+  .c-split-section .c-media {
+    order: 2;
+  }
+
+
+  /* ----------------------------------------------
+     Section Intro
+  ---------------------------------------------- */
+
+  .l-grid--section-intro {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+
+  /* ----------------------------------------------
+     2 Columns
+  ---------------------------------------------- */
+
+  .l-grid--cards-2 {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+    margin-top: 3.2rem;
+  }
+
+
+  /* ----------------------------------------------
+     3 Columns
+  ---------------------------------------------- */
+
+  .l-grid--3 {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+
+  /* ----------------------------------------------
+     5 Columns
+  ---------------------------------------------- */
+
+  .l-grid--5 {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+
+  /* ----------------------------------------------
+     Hero
+  ---------------------------------------------- */
+
+  .c-hero {
+    padding-top: 3.2rem;
+    padding-bottom: 6rem;
+  }
+
+  .c-hero__heading {
+    margin-bottom: 2.4rem;
+  }
+
+
+  /* ----------------------------------------------
+     Overview
+  ---------------------------------------------- */
+
+  .c-overview {
+    padding-bottom: 60px;
+  }
+
+
+  /* ----------------------------------------------
+     Problem
+  ---------------------------------------------- */
+
+
+  /* ----------------------------------------------
+     Research Objectives
+  ---------------------------------------------- */
+
+  .c-research-objectives {
+    padding-block: 60px;
+  }
+
+
+  /* ----------------------------------------------
+     Statement
+  ---------------------------------------------- */
+
+  .c-statement {
+    padding-block: 50px;
+  }
+
+  .c-statement__inner {
+    width: 100%;
+  }
+
+  .c-statement--final {
+    padding-block: 60px;
+  }
+
+
+  /* ----------------------------------------------
+     Competitors
+  ---------------------------------------------- */
+
+  .c-competitors {
+    padding-block: 60px;
+  }
+
+  .c-competitors .l-grid--3 {
+    margin-top: 32px;
+  }
+
+
+  /* ----------------------------------------------
+     User Feedback
+  ---------------------------------------------- */
+
+  .c-user-feedback {
+    padding-block: 60px;
+  }
+
+  .c-user-feedback .l-grid--3 {
+    margin-top: 40px;
+  }
+
+
+  /* ----------------------------------------------
+     Research Summary
+  ---------------------------------------------- */
+
+  .c-research-summary {
+    padding-block: 60px;
+  }
+
+  .c-research-summary .l-grid--3 {
+    margin-top: 32px;
+  }
+
+
+  /* ----------------------------------------------
+     Target Users
+  ---------------------------------------------- */
+
+  .c-split-section--target-users {
+    padding-block: 60px;
+  }
+
+
+  /* ----------------------------------------------
+     Challenges / Findings
+  ---------------------------------------------- */
+
+  .c-split-section--challenge,
+  .c-split-section--findings {
+    padding-block: 40px;
+  }
+
+
+  /* ----------------------------------------------
+     Gallery
+  ---------------------------------------------- */
+
+  .c-gallery {
+    padding-block: 40px;
+  }
+
+  .c-gallery .l-grid--3 {
+    gap: 16px;
+  }
+
+
+  /* ----------------------------------------------
+     Section Break
+  ---------------------------------------------- */
+
+  .c-section-break {
+    height: 80px;
+  }
+
+
+  /* ----------------------------------------------
+     Project Goals
+  ---------------------------------------------- */
+
+  .c-project-goals {
+    padding-block: 60px;
+  }
+
+
+  /* ----------------------------------------------
+     User Flow
+  ---------------------------------------------- */
+
+  .c-user-flow {
+    padding-block: 60px;
+  }
+
+  .c-user-flow .c-media--wide {
+    margin-top: 32px;
+  }
+
+
+  /* ----------------------------------------------
+     Ideas
+  ---------------------------------------------- */
+
+  .c-ideas {
+    padding-block: 60px;
+  }
+
+  .c-ideas .l-grid--3 {
+    margin-top: 32px;
+  }
+
+
+  /* ----------------------------------------------
+     Testing
+  ---------------------------------------------- */
+
+  .c-testing {
+    padding-block: 60px;
+  }
+
+
+  /* ----------------------------------------------
+     Usability Testing
+  ---------------------------------------------- */
+
+  .c-usability-testing {
+    padding-block: 60px;
+  }
+
+  .c-usability-testing .l-grid--5 {
+    margin-top: 40px;
+  }
+
+
+  /* ----------------------------------------------
+     Prototype
+  ---------------------------------------------- */
+
+  .c-split-section--prototype {
+    padding-block: 60px;
+  }
+
+}
+
+
+/* ==================================================
+   33. SMALL MOBILE
+================================================== */
+
+@media (max-width: 480px) {
+
+  .l-container {
+    width: calc(100% - 32px);
+  }
+
+  .l-grid--split {
+    gap: 2.4rem;
+  }
+
+  .l-grid--3 {
+    gap: 3.2rem;
+  }
+
+  .c-section-break {
+    height: 6rem;
+  }
+
+}

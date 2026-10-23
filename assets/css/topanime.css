@@ -1,0 +1,879 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+/* =========================================================
+         HERO / OBJECTS
+      ========================================================= */
+
+/* ---------------------------------------------------------
+         Hero
+      --------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  height: 120svh;
+  z-index: 0;
+  width: 100%;
+
+  display: block;
+  padding: 0;
+  overflow-x: clip;
+
+}
+
+section.hero {
+  display: block;
+  padding: 0;
+}
+
+/* ---------------------------------------------------------
+         Hero Stage
+      --------------------------------------------------------- */
+
+.hero-stage {
+  position: sticky;
+  top: 0;
+
+  width: 100%;
+  height: 100svh;
+
+  background-color: #fff;
+
+  overflow: hidden;
+
+  /*
+         * 1920pxを基準にしたスケール
+         *
+         * 1920px → 1
+         * 1440px → 0.75
+         * 1200px → 0.625
+         * 1100px → 約0.573
+         *
+         * 1100px以上では、
+         * オブジェクトのサイズ・位置を
+         * 同じ比率で縮小する。
+         */
+  --s: clamp(0.573, calc(100vw / 1440px), 1);
+
+  transform-origin: 62% 50%;
+}
+
+/* ---------------------------------------------------------
+         NOTEBOOK
+      --------------------------------------------------------- */
+
+.notebook {
+  position: absolute;
+
+  /*
+         * 1440px時：630px
+         * 画面幅に合わせて比例縮小
+         */
+  width: calc(630px * var(--s));
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 2;
+}
+
+.notebook-bg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ---------------------------------------------------------
+         Pages
+      --------------------------------------------------------- */
+
+.page {
+  position: absolute;
+
+  top: 8%;
+  height: 84%;
+}
+
+/* Left page */
+
+.page-left {
+  left: 7%;
+  width: 38%;
+}
+
+.sketch {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+/* Right page */
+
+.page-right {
+  left: 54%;
+  width: 38%;
+
+  transform: translateY(10%);
+}
+
+/* ---------------------------------------------------------
+         Typing
+      --------------------------------------------------------- */
+
+#typing {
+  white-space: pre-wrap;
+
+  line-height: 1.5;
+
+  /*
+         * Notebookのスケールに合わせて
+         * テキストも自然に縮小
+         */
+  font-size: clamp(10px, calc(16px * var(--s)), 20px);
+}
+
+/* ---------------------------------------------------------
+         Pen
+      --------------------------------------------------------- */
+
+.pen {
+  position: absolute;
+
+  width: calc(42px * var(--s));
+
+  left: 54%;
+  top: 14%;
+
+  transform-origin: 15% 90%;
+  transform: rotate(15deg);
+
+  transition:
+    left 0.08s linear,
+    top 0.08s linear,
+    transform 0.08s linear;
+}
+
+/* ---------------------------------------------------------
+         PLANT
+      --------------------------------------------------------- */
+
+.plant {
+  position: absolute;
+
+  top: calc(50% - 470px * var(--s));
+
+  left: calc(50% + 100px * var(--s));
+
+  z-index: 0;
+  width: calc(180px * var(--s));
+}
+
+/* ---------------------------------------------------------
+         COFFEE
+      --------------------------------------------------------- */
+
+.coffee {
+  position: absolute;
+  width: calc(180px * var(--s));
+  top: calc(50% - 280px * var(--s));
+  left: calc(50% + 350px * var(--s));
+  display: inline-block;
+  z-index: 1;
+}
+
+.label-coffee {
+  position: absolute;
+  top: -36px;
+  left: 50%;
+  width: auto;
+  height: 30px;
+}
+
+/* ---------------------------------------------------------
+         Cup
+      --------------------------------------------------------- */
+
+.coffee a {
+  z-index: 0;
+}
+
+.coffee .cup {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+.coffee a:hover {
+  opacity: 1;
+}
+
+.coffee a:hover .cup {
+  animation: katakata 0.64s steps(1) infinite alternate;
+}
+
+/* ---------------------------------------------------------
+         Steam
+      --------------------------------------------------------- */
+
+.coffee .steam {
+  position: absolute;
+
+  /*
+         * カップ中央付近
+         */
+  left: 40%;
+
+  /*
+         * カップの上に約10px重ねる
+         */
+  bottom: calc(100% - 10px);
+
+  transform: translateX(-50%);
+
+  width: calc(40px * var(--s));
+  height: auto;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  animation: steam 5s infinite;
+
+  z-index: 1;
+}
+
+/* ---------------------------------------------------------
+         Coffee Animation
+      --------------------------------------------------------- */
+
+@keyframes steam {
+  0% {
+    opacity: 0;
+
+    transform: translateY(15px);
+  }
+
+  30% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 0;
+
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes katakata {
+  0% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(4deg);
+  }
+
+  100% {
+    transform: rotate(-4deg);
+  }
+}
+
+/* =========================================================
+         LAPTOP
+      ========================================================= */
+
+.laptop {
+  position: absolute;
+
+  top: calc(50% - 550px * var(--s));
+
+  left: calc(50% - 950px * var(--s));
+
+  transform: rotate(-15deg);
+
+  z-index: 0;
+}
+
+.laptop img {
+  width: calc(700px * var(--s));
+  height: auto;
+}
+
+/* =========================================================
+         MOUSE
+      ========================================================= */
+
+.mouse {
+  position: absolute;
+
+  top: calc(50% - 420px * var(--s));
+
+  left: calc(50% - 200px * var(--s));
+
+  z-index: 0;
+
+}
+
+.mouse img {
+  width: calc(100px * var(--s));
+}
+
+/* =========================================================
+         WATCH
+      ========================================================= */
+
+.watch-wrap {
+  position: absolute;
+
+  top: calc(50% - 430px * var(--s));
+
+  left: calc(50% + 600px * var(--s));
+
+  transform: rotate(-10deg);
+
+  z-index: 1;
+}
+
+.watch {
+  width: calc(100px * var(--s));
+  height: auto;
+}
+
+/*
+       * SVG内部の座標
+       */
+#hour,
+#minute,
+#second {
+  transform-box: view-box;
+  transform-origin: 45.79px 252px;
+}
+
+/* =========================================================
+         PHONE
+      ========================================================= */
+
+.phone {
+  position: absolute;
+
+  top: calc(50% + 10px * var(--s));
+
+  left: calc(50% - 480px * var(--s));
+
+  width: calc(120px * var(--s));
+
+  transform: rotate(5deg);
+
+  z-index: 1;
+}
+
+.phone:hover a {
+  opacity: 1;
+}
+
+.label-works {
+  position: absolute;
+  top: -36px;
+  left: 50%;
+  width: auto;
+  height: 30px;
+}
+
+.phone-frame {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  position: relative;
+
+  z-index: 10;
+
+  pointer-events: none;
+}
+
+.phone-screen {
+  position: absolute;
+
+  top: calc(10px * var(--s));
+  left: calc(4px * var(--s));
+
+  width: calc(110px * var(--s));
+
+  aspect-ratio: 138 / 254;
+
+  overflow: hidden;
+
+  border-radius: 4px;
+
+  z-index: 1;
+}
+
+.phone-screen img {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0;
+
+  transition: opacity 1.2s ease;
+}
+
+.phone-screen img.active {
+  opacity: 1;
+}
+
+.phone:hover .phone-frame, .phone:hover .phone-screen {
+  transform: rotate(-5deg);
+}
+
+/* =========================================================
+         DOCUMENT
+      ========================================================= */
+
+.document {
+  position: absolute;
+
+  top: calc(50% - 40px * var(--s));
+
+  left: calc(50% + 350px * var(--s));
+  width: calc(280px * var(--s));
+
+  z-index: 0;
+}
+
+.document img {
+  height: auto;
+
+}
+
+/* =========================================================
+         USB / PINS
+      ========================================================= */
+
+.usb {
+  position: absolute;
+
+  top: calc(50% - 380px * var(--s));
+
+  left: calc(50% - 30px * var(--s));
+
+  transform: rotate(-10deg);
+
+  z-index: 0;
+}
+
+.usb img {
+  width: calc(30px * var(--s));
+}
+
+/* =========================================================
+         CAMERA
+      ========================================================= */
+
+.camera {
+  position: absolute;
+
+  top: calc(50% + 80px * var(--s));
+
+  left: calc(50% - 750px * var(--s));
+
+  transform: rotate(-10deg);
+  width: calc(220px * var(--s));
+
+  z-index: 0;
+}
+
+.camera:hover a {
+  opacity: 1;
+}
+
+.camera:hover img {
+  transform: rotate(5deg);
+}
+
+.camera .label-about {
+  position: absolute;
+  top: -36px;
+  left: 50%;
+  width: auto;
+  height: 30px;
+}
+
+.camera:hover .label-about {
+  transform: none;
+}
+
+.cheki01 {
+  position: absolute;
+  top: calc(50% + 330px * var(--s));
+  left: calc(50% - 600px * var(--s));
+  transform: rotate(-10deg);
+  z-index: -1;
+}
+
+.cheki02 {
+  position: absolute;
+  top: calc(50% + 280px * var(--s));
+  left: calc(50% - 680px * var(--s));
+  z-index: -1;
+}
+
+.cheki01 img,
+.cheki02 img {
+  width: calc(80px * var(--s));
+}
+
+
+/* =========================================================
+         WORKS
+      ========================================================= */
+
+.works {
+  position: relative;
+
+  z-index: 1;
+
+  min-height: 100svh;
+  /* margin-top: -70vh; */
+}
+
+/* =========================================================
+         TABLET
+         769px - 1099px
+      ========================================================= */
+
+@media (min-width: 769px) and (max-width: 1099px) {
+  .hero-stage {
+    --s: 0.8;
+  }
+
+  /* Notebook */
+
+  .notebook {
+    width: 550px;
+  }
+
+  /* Laptop */
+
+  .laptop {
+    top: calc(50% - 500px);
+    left: calc(50% - 700px);
+  }
+
+  /* Plant */
+
+  .plant {
+    top: calc(50% - 420px);
+    left: calc(50% + 40px);
+  }
+
+  /* Coffee */
+
+  .coffee {
+    top: calc(50% - 350px);
+    left: calc(50% + 230px);
+  }
+
+  /* Mouse */
+
+  .mouse {
+    top: calc(50% - 350px);
+    left: calc(50% - 120px);
+  }
+
+  /* Watch */
+
+  .watch-wrap {
+    top: calc(50% - 20px);
+    left: calc(50% + 300px);
+    transform: rotate(10deg);
+  }
+
+  /* Phone */
+
+  .phone {
+    top: calc(50% + 20px);
+    left: calc(50% - 420px);
+  }
+
+  /* Document */
+
+  .document {
+    top: calc(50% - 180px);
+    left: calc(50% + 280px);
+  }
+
+  .document img {
+    width: calc(400px * var(--s));
+  }
+
+  .usb {
+    top: calc(50% - 280px);
+    left: calc(50% - 20px);
+  }
+
+  .camera {
+    top: calc(50% + 250px);
+    left: calc(50% - 280px);
+  }
+
+  .cheki01 {
+    top: calc(50% + 280px);
+    left: calc(50% - 80px);
+  }
+
+  .cheki02 {
+    top: calc(50% + 300px);
+    left: calc(50% - 120px);
+  }
+}
+
+/* =========================================================
+         MOBILE / TABLET
+         421px - 768px
+      ========================================================= */
+
+@media (min-width: 421px) and (max-width: 768px) {
+  .hero-stage {
+    --s: 0.7;
+  }
+
+  /* Notebook */
+
+  .notebook {
+    width: 430px;
+    /* left: 40%;
+    top: 50%; */
+  }
+
+  /* Laptop */
+
+  .laptop {
+    top: calc(50% - 460px);
+    left: calc(50% - 550px);
+  }
+
+  /* Plant */
+
+  .plant {
+    top: calc(50% - 400px);
+    left: calc(50% - 60px);
+  }
+
+  /* Coffee */
+
+  .coffee {
+    top: calc(50% - 300px);
+    left: calc(50% + 80px);
+  }
+
+  /* Mouse */
+
+  .mouse {
+    display: none;
+    /* top: calc(50% - 300px);
+    left: calc(50% - 70px); */
+  }
+
+  /* Watch */
+
+  .watch-wrap {
+    top: calc(50% + 80px);
+    left: calc(50% + 180px);
+    transform: rotate(30deg);
+  }
+
+  /* Phone */
+
+  .phone {
+    top: calc(50% + 200px);
+    left: calc(50% - 80px);
+    transform: rotate(-5deg);
+  }
+
+  /* Document */
+
+  .document {
+    display: none;
+    /* top: calc(50% - 180px);
+    left: calc(50% + 180px); */
+  }
+
+  /* .document img {
+    width: calc(400px * var(--s));
+  } */
+
+  .usb {
+    top: calc(50% - 280px);
+    left: calc(50% - 20px);
+  }
+
+  .camera {
+    top: calc(50% + 200px);
+    left: calc(50% - 280px);
+    transform: rotate(10deg);
+  }
+
+  .cheki01 {
+    top: calc(50% + 320px);
+    left: calc(50% - 260px);
+  }
+
+  .cheki02 {
+    top: calc(50% + 320px);
+    left: calc(50% - 220px);
+  }
+
+  .usb {
+    display: none;
+  }
+}
+
+/* =========================================================
+         SMALL MOBILE
+         420px以下
+========================================================= */
+
+@media (max-width: 420px) {
+  .hero {
+    height: 140svh;
+
+  }
+
+  .hero-stage {
+    --s: 0.55;
+    /* transform-origin: 60% 40%; */
+    height: 100svh;
+    min-height: 100svh;
+  }
+
+  /* Notebook */
+
+  .notebook {
+    width: 380px;
+
+    /* left: 35%;
+    top: 48%; */
+  }
+
+  /* Laptop */
+
+  .laptop {
+    top: calc(50% - 400px);
+    left: calc(50% - 500px);
+    transform: rotate(-10deg);
+  }
+
+  .laptop img {
+    width: calc(900px * var(--s));
+  }
+
+  /* Plant */
+
+  .plant {
+    top: calc(50% - 390px);
+    left: calc(50% - 30px);
+    width: calc(200px * var(--s));
+  }
+
+  /* Coffee */
+
+  .coffee {
+    top: calc(50% - 270px);
+    left: calc(50% + 40px);
+    width: calc(220px * var(--s));
+  }
+
+  .phone {
+    top: calc(50% + 220px);
+    left: calc(50% - 40px);
+    transform: rotate(5deg);
+    width: calc(140px * var(--s));
+  }
+
+  .phone-screen {
+    width: calc(130px * var(--s));
+  }
+
+  /* Watch */
+
+  .watch-wrap {
+    top: calc(50% + 90px);
+    left: calc(50% + 120px);
+    transform: rotate(15deg);
+  }
+
+  .document {
+    /* top: calc(50% - 100px);
+    left: calc(50% + 100px); */
+  }
+
+  .camera {
+    top: calc(50% + 200px);
+    left: calc(50% - 200px);
+    width: calc(240px * var(--s));
+  }
+
+  .label-coffee, .label-works, .camera .label-about {
+    top: -28px;
+    height: 25px;
+  }
+
+  /* .cheki01 {
+    top: calc(50% + 240px);
+    left: calc(50% - 120px);
+  }
+
+  .cheki02 {
+    top: calc(50% + 260px);
+    left: calc(50% - 160px);
+  } */
+
+  .usb,
+  .mouse, .cheki01, .cheki02, .document {
+    display: none;
+  }
+
+  /* =========================================================
+         OPTIONAL
+         Reduced Motion
+      ========================================================= */
+
+  @media (prefers-reduced-motion: reduce) {
+
+    .coffee .steam,
+    .coffee a:hover .cup {
+      animation: none;
+    }
+
+    .phone-screen img {
+      transition: none;
+    }
+
+    .mouse,
+    .document img,
+    .pen {
+      transition: none;
+    }
+  }
+}
