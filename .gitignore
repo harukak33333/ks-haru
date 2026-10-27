@@ -8,3 +8,9 @@
 # macOS
 .DS_Store
 **/.DS_Store
+
+# Editor
+.vscode/
+
+# Server config
+.htaccess

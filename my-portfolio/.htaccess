@@ -1,4 +1,0 @@
-AuthUserFile /home/haruka/domains/ks-haru.com/public_html/.htpasswd
-AuthName "Restricted Area"
-AuthType Basic
-require valid-user
