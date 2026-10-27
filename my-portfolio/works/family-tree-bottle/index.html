@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Family Tree Bottle | Haruka Kashima</title>
+    <meta
+      name="description"
+      content="UI/UXデザイナー・Webデザイナー、鹿島遥のポートフォリオサイト。WebサイトやデジタルプロダクトのUI/UXデザイン、アートディレクションなど、これまでの制作実績をご紹介します。"
+    />
+    <link rel="icon" href="/assets/img/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow, noarchive" />
+    <base href="/en/my-portfolio/" />
+    <meta property="og:image" content="/assets/img/ogp.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Marcellus&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/destyle.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/layout.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+  </head>
+  <body class="theme-family-tree-bottle">
+    <header id="header"></header>
+    <main class="l-main c-main">
+      <section class="l-section c-hero">
+        <div class="l-container">
+          <div class="c-hero__heading">
+            <p class="c-hero__category">Product Design / UX/UI / Claude Code</p>
+            <h1 class="c-hero__title">Family Tree Bottle</h1>
+            <p class="c-hero__meta">
+              離れて暮らす大切な人と繋がりを感じるためのアプリ
+            </p>
+          </div>
+
+          <figure class="c-media c-media--hero">
+            <img
+              src="/assets/img/family-tree-bottle-kv.png"
+              alt="Family Tree Bottle キービジュアル"
+              loading="eager"
+            />
+          </figure>
+        </div>
+      </section>
+      <section class="l-section c-overview">
+        <div class="l-container">
+          <div class="l-grid l-grid--overview">
+            <!-- Summary -->
+            <div class="c-overview__summary">
+              <h2 class="c-heading c-heading--small">Summary</h2>
+
+              <p class="c-text">
+                離れて暮らす大切な人は、今日どんな一日を過ごしたのだろう。<br />
+                「Family Tree
+                Bottle」は、そんなふとした思いに寄り添い、離れて暮らす家族や恋人が、日々の気持ちを通してゆるやかにつながるためのWebアプリである。<br />
+                ユーザーは、その日の気持ちに合った色を選び、共有のボトルに投稿する。長いメッセージを書いたり、相手の返信を待ったりする必要はない。言葉にするほどではない気持ちも、色として共有することで、お互いの存在を身近に感じられる体験を目指した。<br />
+                Google UX Design
+                Certificateの学習プロジェクトとして企画・デザインを行い、Claude
+                Codeを活用したバイブコーディングにも取り組んだ。UIデザインにとどまらず、インタラクションの設計から動作するプロトタイプの実装まで、一貫して制作した。<br />
+              </p>
+            </div>
+
+            <!-- Links -->
+            <div class="c-overview__links">
+              <h2 class="c-heading c-heading--small">Links</h2>
+
+              <ul class="c-link-list">
+                <li class="c-link-list__item">
+                  <a
+                    class="c-link"
+                    href="https://ks-haru.com/demo/family-tree-bottle/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Family Tree Bottle アプリのデモ
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+
+            <!-- My Role -->
+            <div class="c-overview__role">
+              <h2 class="c-heading c-heading--small">My Role</h2>
+
+              <p class="c-text">
+                UI/UX Designer｜個人制作<br>
+
+企画・課題設定からUI設計、プロトタイプ制作までを一貫して担当した。
+              </p>
+              <p class="c-text">
+
+担当範囲
+<ul class="c-list">
+<li>課題定義・コンセプト設計</li>
+<li>ペルソナ設定・競合分析</li>
+<li>ユーザージャーニー・ユーザーフローの設計</li>
+<li>ワイヤーフレーム・プロトタイプ制作</li>
+<li>インタラクションデザイン・ビジュアルデザイン</li>
+<li>Hi-Fi UIデザイン</li>
+<li>Claude Codeを活用したプロトタイプ実装</li>
+</ul>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="l-section c-split-section c-split-section--problem">
+        <div class="l-container">
+          <div class="l-grid l-grid--split">
+            <div class="c-split-section__content">
+              <h2 class="c-heading">The Problem</h2>
+
+              <h3>
+                離れて暮らす家族と、無理なくつながり続けるには？
+              </h3>
+
+              <p class="c-text">
+                留学や就職、転勤などをきっかけに、家族や親しい人と離れて暮らすことがある。<br>
+新しい環境での生活は、仕事や学業、日々の家事などで忙しく、目の前のことをこなすだけでも精一杯になりがちだ。そんな日々の中で、ふと家族のことが気になったり、自分の不安を誰かと共有したくなったりすることがある。<br>
+一方で、相手にも生活があることを考えると、頻繁に連絡するのをためらってしまう。特に伝えたいことがなければ、メッセージを送るきっかけも生まれにくい。<br>
+連絡を取ればつながりを感じられる。それでも、連絡すること自体が負担になれば、習慣として続けるのは難しい。</p>
+              <p class="c-text">
+そこで、次の問いを設定した。<br>
+親しい人と離れて暮らしていても、連絡の負担を感じることなく、日々のつながりを実感できる体験をつくれないだろうか。
+              </p>
+
+            </div>
+
+            <figure class="c-media c-media--landscape">
+              <img
+                src="/assets/img/family-tree-bottle-01.png"
+                alt=""
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+      <!-- ==================================================
+         OPPORTUNITY
+    ================================================== -->
+      <section class="c-statement c-section-dark">
+        <div class="l-container">
+          <div class="c-statement__inner">
+            <h2 class="c-statement__title">The opportunity</h2>
+
+            <p class="c-statement__text">
+              「連絡を取る」ことと、「つながりを感じる」ことを切り離して考える。<br />
+              既存のコミュニケーションサービスでは、メッセージや写真を送る、通話をするといった、何らかの情報を相手に伝える行動が中心となる。<br class="br-sp">
+しかし、日々のつながりを感じるために、必ずしも毎回会話をする必要はないのではないだろうか。<br  class="br-sp">
+例えば、「今日は少し疲れた」「なんとなく気分がいい」といった小さな感情を、言葉にせず共有できたら。<br class="br-sp">相手の反応を求めることなく、お互いの存在や日々の様子を感じられるかもしれない。<br />
+そこで、コミュニケーションの負担を減らしながら、つながりを実感できる仕組みに着目した。
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- ==================================================
+         GOALS
+    ================================================== --><section class="l-section c-split-section c-split-section--target-users">
+        <div class="l-container">
+          <div class="l-grid l-grid--split">
+            <div class="c-split-section__content">
+              <h2 class="c-heading">Project goals</h2>
+            </div>
+
+            <div class="c-split-section__content">
+              
+              <p class="c-text">
+                <ol class="c-list--number">
+                  <li>
+                離れていても、つながりを感じられる<br>
+                毎日の気持ちを共有することで、相手の存在を身近に感じられる体験を目指す。会話や返信がなくても、お互いを気にかけていることが自然に伝わる仕組みを考える。
+                  </li>
+                  <li>
+                忙しい日々の中でも、無理なく続けられる<br>
+                投稿に必要な操作や心理的な負担を最小限に抑える。同時に、日々の投稿が少しずつ積み重なること自体に意味を持たせ、自然と使い続けたくなる仕組みをつくる。
+                  </li>
+                </ol>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==================================================
+         COMPETITORS
+    ================================================== -->
+      <section class="l-section c-competitors">
+        <div class="l-container">
+          <h2 class="c-heading">Competitors</h2>
+<p class="c-text">既存のコミュニケーションサービスを比較し、それぞれの特徴と利用時に生じ得る負担を整理した。</p>
+<p class="c-text">これらのサービスは、それぞれ異なる形で人とのつながりを支えている。一方、日常的なつながりを感じるための手段としては、相手に何かを伝えたり、時間を合わせたりする必要がある。<br>
+
+Family Tree Bottleでは、既存のサービスを置き換えるのではなく、会話やメッセージを必要としない、新しい接点をつくることに可能性を見出した。</p>
+          <div class="l-grid l-grid--3">
+            <!-- Competitor 01 -->
+            <article class="c-competitor">
+
+              <h3 class="c-competitor__title">InstagramなどのSNS</h3>
+
+              <p class="c-text">
+                日常の写真や出来事を投稿し、相手の近況を知ることができる。リアクションを通じて気軽に交流できる一方、投稿内容を考えたり、不特定多数からの反応を意識したりする場面もある。
+              </p>
+            </article>
+
+            <!-- Competitor 02 -->
+            <article class="c-competitor">
+
+              <h3 class="c-competitor__title">LINEなどのメッセージアプリ</h3>
+
+              <p class="c-text">
+                時間や場所を問わず、テキストや写真でコミュニケーションを取れる。自分のタイミングで返信できる一方、送る内容を考えたり、返信をしたりすることが負担になる場合もある。
+              </p>
+            </article>
+
+            <!-- Competitor 03 -->
+            <article class="c-competitor">
+
+              <h3 class="c-competitor__title">FaceTimeなどの通話アプリ</h3>
+
+              <p class="c-text">
+                声や表情を通じて相手の様子を知ることができ、距離を感じにくい。一方で、お互いの都合を合わせる必要があり、時差や生活リズムが異なる場合には利用のハードルが上がる。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- ==================================================
+         TARGET USER
+    ================================================== -->
+      <section class="l-section c-split-section c-split-section--target-users">
+        <div class="l-container">
+              <h2 class="c-heading">Target Users</h2>
+
+              <p class="c-text">
+                2つのユーザーペルソナを設定した。<br>
+2人に共通しているのは、相手を大切に思っていても、日々の連絡を継続することは簡単ではないという点だ。</p>
+              <p class="c-text">
+そこで、コミュニケーションの頻度を増やすのではなく、つながりを感じるために必要な行動そのものを小さくすることを設計の出発点とした。</p>
+        </div>
+        <div class="l-container">
+          <div class="l-grid l-grid--split">
+            <div class="c-split-section__content">
+              <h3 class="c-heading">
+                ユキ｜24歳
+              </h3>
+
+              <p class="c-text">
+                オーストラリアでワーキングホリデー中
+
+東京出身。新しい環境での生活を楽しみながら、語学学校とアルバイトで忙しい日々を送っている。家族とは仲が良いものの、日々の出来事を逐一報告する習慣はなく、気づけば数週間連絡していないこともある。
+              </p>
+              <ul class="c-list"><li>家族が元気に過ごしていることを、もっと身近に感じたい</li>
+<li>忙しい日でも、気軽に家族との接点を持ちたい</li>
+<li>連絡できていないことへの罪悪感を減らしたい</ul>
+            </div>
+
+            <figure class="c-media c-media--landscape">
+              <img
+                src="/assets/img/family-tree-bottle-02.png"
+                alt=""
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+        <div class="l-container">
+          <div class="l-grid l-grid--split">
+            <div class="c-split-section__content">
+              <h3 class="c-heading">
+                タイキ｜31歳
+              </h3>
+
+              <p class="c-text">
+                インドに駐在中
+
+福岡出身。建築関連のプロジェクトに携わり、海外で生活している。妻は神奈川で暮らしており、離れていてもお互いのことを気にかけている。慣れない環境で食生活が変わり、体重が減っていることを妻から心配されている。
+              </p>
+              <ul class="c-list">
+                <li>自分の生活や気持ちを、無理なく相手に伝えたい</li>
+                <li>相手に余計な心配をかけずに、日々の様子を共有したい</li>
+                <li>お互いの忙しさを気にせず、つながりを感じたい</ul>
+            </div>
+
+            <figure class="c-media c-media--landscape">
+              <img
+                src="/assets/img/family-tree-bottle-03.png"
+                alt=""
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+      <!-- ==================================================
+         USER PERSONA
+    ================================================== -->
+      <section class="c-statement c-section-light">
+        <div class="l-container">
+          <div class="c-statement__inner">
+            <h2 class="c-statement__title">Key Insights</h2>
+            <p class="c-statement__text">これらの仮説をもとに、サービスの方向性を検討した。</p>
+            <p class="c-statement__text c-caption">ユーザーリサーチによって検証された結果ではなく、課題設定や競合分析を通じて整理した設計上の仮説である。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="l-section c-research-objectives">
+        <div class="l-container">
+          <div class="l-grid l-grid--cards-2">
+            <article class="c-card c-card--research c-section-light">
+              <h3 class="c-card__title">#1</h3>
+              <h4 class="c-heading c-heading--small">
+                相手からの反応が、つながりの実感につながるのではないか
+              </h4>
+
+              <p class="c-card__text">
+                
+SNSでは、相手が投稿を閲覧したりリアクションを返したりすることで、自分の発信が届いたと感じられる。必ずしも会話が生まれなくても、相手が自分の存在に気づいてくれたとわかることには意味があると考えた。<br />Design Implication： 投稿者に負担をかけずに、相手が投稿を受け取ったことや、関心を寄せていることが伝わる仕組みを検討する。」
+              </p>
+            </article>
+
+            <article class="c-card c-card--research c-section-light">
+              <h3 class="c-card__title">#2</h3>
+              <h4 class="c-heading c-heading--small">
+                つながりを感じるための行動は、手軽である必要がある
+              </h4>
+
+              <p class="c-card__text">
+                離れて暮らす人同士は、それぞれ異なる生活リズムの中で仕事や学業、家事などをこなしている。つながりを保つために時間や労力が必要になると、忙しい日には後回しになりがちだ。<br />
+Design Implication： 短時間で完了し、特別な準備を必要としない投稿体験を設計する。
+              </p>
+            </article>
+            <article class="c-card c-card--research c-section-light">
+              <h3 class="c-card__title">#3</h3>
+              <h4 class="c-heading c-heading--small">
+                相手を思っていても、連絡のきっかけがない
+              </h4>
+
+              <p class="c-card__text">
+               日常の中で相手を気にかけていても、わざわざメッセージを送るほどの出来事がなければ、連絡を取らないまま時間が過ぎてしまうことがある。<br />
+Design Implication： 伝えるべき話題がなくても成立する、気持ちを選ぶだけのコミュニケーションをつくる。
+              </p>
+            </article>
+            <article class="c-card c-card--research c-section-light">
+              <h3 class="c-card__title">#4</h3>
+              <h4 class="c-heading c-heading--small">
+                日々の小さな変化に気づける余地がある
+              </h4>
+
+              <p class="c-card__text">
+                離れて暮らしていると、相手の体調や気分の変化をすぐに知ることが難しい場合がある。後になって初めて、相手がつらい時期を過ごしていたと知ることもある。<br />
+Design Implication： 日々の気持ちを蓄積し、いつもと違う様子を振り返るきっかけをつくる。ただし、色だけで相手の健康状態を判断するのではなく、あくまで相手を気にかけるきっかけとして位置づける。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- ==================================================
+         Concept
+    ================================================== -->
+      <section class="l-section c-split-section c-split-section--target-users">
+        <div class="l-container">
+          <div class="l-grid l-grid--split">
+            <div class="c-split-section__content">
+              <h2 class="c-heading">Concept</h2>
+            </div>
+
+            <div class="c-split-section__content">
+              <p class="c-text">
+                気持ちをひとつ、ボトルに入れる。家族みんなで、ひとつの木を育てる。
+              </p>
+              <p class="c-text">
+                Family Tree Bottleでは、その日の気持ちを色に置き換え、共有のボトルに入れるというシステムを採用した。<br>
+
+ユーザーは、気持ちに合う色を選んで投稿する。必要であれば短いメモを添えることもできるが、何も書かずに投稿することもできる。<br>
+
+それぞれの投稿はボトルの中に蓄積され、投稿が増えるにつれて、ボトルの中の木が少しずつ成長していく。自分ひとりではなく、家族みんなの気持ちによって木が育っていくことが、日々の参加を促す小さな動機になることを狙った。<br>
+
+大切なのは、毎日必ず投稿することではない。投稿しない日があっても負担や罪悪感を感じず、気が向いたときに立ち寄れる場所であることを目指した。
+              </p>
+            </div>
+          </div>
+          <div class="c-user-flow">
+          <figure class="c-media c-media--wide">
+            <img
+              src="/assets/img/family-tree-bottle-12.png"
+              alt="User flow diagram"
+              loading="lazy"
+            />
+          </figure>
+          </div>
+        </div>
+      </section>
+      <!-- ==================================================
+         USER FLOW
+    ================================================== -->
+      <section class="l-section c-user-flow">
+        <div class="l-container">
+          <h2 class="c-heading">User Flow</h2>
+          <p class="c-text">
+            ユーザーが迷わず気持ちを投稿できるよう、体験をシンプルな流れに整理した。
+          </p>
+
+          <figure class="c-media c-media--wide">
+            <img
+              src="/assets/img/family-tree-bottle-04.png"
+              alt="User flow diagram"
+              loading="lazy"
+            />
+          </figure>
+
+        </div>
+      </section>
+      <!-- ==================================================
+         Emotion & Color System
+    ================================================== -->
+      <section class="l-section c-split-section c-split-section--target-users">
+        <div class="l-container">
+          <div class="l-grid l-grid--split">
+            <div class="c-split-section__content">
+              <h2 class="c-heading">Emotion & Color System</h2>
+            </div>
+
+            <div class="c-split-section__content">
+              <p class="c-text">
+                Gloria Willcoxの感情色相環を参考に、Positive / Negativeの縦軸とCalm / Energeticの横軸からなる独自の感情モデルを設計した。4象限をそれぞれ2つに分け、計8種類の感情を定義。初期状態には、ニュートラルな感情として「Ordinary」を設定した。
+              </p>
+              <p class="c-text">
+
+Hi-Fi UIでは、各感情に割り当てた色を、Family Treeの養分となる水滴をイメージしたバブルに適用。濡れたような質感を加えることで、日々の感情がボトルに蓄積され、木の成長につながるというコンセプトを視覚的に表現した。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="l-container">
+          <figure class="c-media c-media--wide">
+            <img
+              src="/assets/img/family-tree-bottle-05.png"
+              alt="Color system"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </section>
+      <!-- ==================================================
+        Hi-Fi Screens
+    ================================================== -->
+      <section class="project-section project-section--screens">
+        <div class="screens">
+            <div class="l-grid l-grid--split screens__title">
+          <h2>Hi-Fi Screens</h2>
+              <p class="c-text">
+                最終的なUIでは、ボトルや木を中心としたビジュアルを通じて、家族の気持ちが少しずつ積み重なっていく世界観を表現した。<br>
+                画面ごとの役割を明確にしながら、操作に迷わないシンプルさと、触れてみたくなる柔らかなビジュアルの両立を目指している。
+              </p>
+          </div>
+          <div class="swiper mySwiper screens__slider">
+            <div class="swiper-wrapper">
+              <!-- Screen 01 -->
+              <article class="swiper-slide screen-card">
+                <div class="screen-card__image">
+                  <img
+                    src="/assets/img/family-tree-bottle-06.png"
+                    alt=""
+                  />
+                </div>
+
+                <div class="screen-card__content">
+                  <h3>Bottle — 共有の場所</h3>
+                  <p>アプリの中心となる画面。ボトルの中に蓄積された気持ちと木の様子を通じて、家族の共有スペースであることを視覚的に伝える。</p>
+                </div>
+              </article>
+
+              <!-- Screen 02 -->
+              <article class="swiper-slide screen-card">
+                <div class="screen-card__image">
+                  <img
+                    src="/assets/img/family-tree-bottle-07.png"
+                    alt=""
+                  />
+                </div>
+
+                <div class="screen-card__content">
+                  <h3>Choose Feeling — 気持ちを選ぶ</h3>
+                  <p>文章を考えることなく、色を選ぶだけで今の気持ちを表現できる画面。直感的に操作できることを重視した。</p>
+                </div>
+              </article>
+
+              <!-- Screen 03 -->
+              <article class="swiper-slide screen-card">
+                <div class="screen-card__image">
+                  <img
+                    src="/assets/img/family-tree-bottle-08.png"
+                    alt=""
+                  />
+                </div>
+
+                <div class="screen-card__content">
+                  <h3>Add a Note — 言葉を添える</h3>
+                  <p>
+                    伝えたいことがある場合だけ、短いメモを追加できる。入力を必須にしないことで、投稿のハードルを下げる。
+                  </p>
+                </div>
+              </article>
+
+              <!-- Screen 04 -->
+              <article class="swiper-slide screen-card">
+                <div class="screen-card__image">
+                  <img
+                    src="/assets/img/family-tree-bottle-09.png"
+                    alt=""
+                  />
+                </div>
+
+                <div class="screen-card__content">
+                  <h3>Collect Feeling — 気持ちを届ける</h3>
+                  <p>選んだ気持ちをボトルに加える体験。操作の結果が視覚的にわかることで、自分の投稿が共有スペースに反映されたことを実感できる設計を目指した。</p>
+                </div>
+              </article>
+
+              <!-- Screen 05 -->
+              <article class="swiper-slide screen-card">
+                <div class="screen-card__image">
+                  <img
+                    src="/assets/img/family-tree-bottle-10.png"
+                    alt=""
+                  />
+                </div>
+
+                <div class="screen-card__content">
+                  <h3>Archive — 気持ちを振り返る</h3>
+                  <p>
+                    過去の投稿を一覧で確認できる画面。日々の気持ちの積み重ねを振り返り、相手や自分の様子を知るきっかけをつくる。
+                  </p>
+                </div>
+              </article>
+
+            </div>
+            <!-- SP only -->
+            <!-- ナビゲーション矢印 -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+      <section
+        <div class="l-container">
+          <div class="l-grid l-grid--split">
+            <div class="c-split-section__content">
+          <h2 class="c-heading">Implementation</h2>
+          <p class="c-text">デザインを、操作できるプロトタイプへ。</p><p class="c-text">
+UIデザインに加え、Claude Codeを活用したバイブコーディングを通じて、Webプロトタイプの実装にも取り組んだ。<br>
+
+デザインを静的な画面として完成させるだけでなく、ユーザーがどのように操作し、その結果がどのように画面へ反映されるのかを具体化することを目指した。<br>
+
+実装を通じて、画面間の遷移やインタラクションを実際に動かしながら確認できる形にした。これにより、デザイン上のアイデアを操作可能な体験として表現するところまで取り組んだ。
+          </p>
+        </div>
+        <a href="https://ks-haru.com/demo/family-tree-bottle/"
+        target="_blank">
+            <figure class="c-media c-media--landscape">
+              <img
+              src="/assets/img/family-tree-bottle-11.png"
+                alt=""
+                loading="lazy"
+              />
+            </figure>
+        </a>
+          </div>
+        </div>
+      </section>
+      <section class="l-section c-split-section c-split-section--target-users">
+        <div class="l-container">
+          <div class="l-grid l-grid--split">
+            <div class="c-split-section__content">
+              <h2 class="c-heading">Results</h2>
+            </div>
+
+            <div class="c-split-section__content">
+              <p class="c-text">
+                今回の制作では、課題設定からコンセプト設計、UIデザイン、プロトタイプ実装までを一貫して行った。<br>
+
+特に、日々の気持ちを色で共有するというアイデアを、ボトルと木のメタファー、投稿フロー、具体的なUIへと落とし込み、操作可能なWebプロトタイプとして形にした点が成果である。<br>
+
+また、Claude Codeを活用することで、デザインと実装を行き来しながら、アイデアを具体的なユーザー体験へと発展させるプロセスに取り組んだ。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="c-statement c-section-light">
+        <div class="l-container">
+          <div class="c-statement__inner">
+            <h2 class="c-statement__title">
+              つながりを生む体験は、機能の多さよりも、<br>使うときの心理的な負担によって左右される。
+            </h2>
+            <p class="c-statement__text">
+             Family Tree Bottleでは、相手にメッセージを送ることではなく、気持ちを色で共有することを体験の中心に据えた。<br class="br-sp">
+             何かを伝えなければならないというプレッシャーを減らすことで、コミュニケーションの新しい形を提案できたと考えている。<br class="br-sp">
+            一方で、気持ちを色で表現するだけで本当に相手の様子を理解できるのか、<br class="br-sp">投稿への反応がなくてもつながりを感じられるのか、といった点は今後検証すべき課題である。<br>
+            今後は、実際のユーザーにプロトタイプを試してもらい、投稿のしやすさや共有体験の受け止め方を確認したい。<br class="br-sp">
+            また、家族間での共有方法や、気持ちの変化を振り返る体験についても検討し、日々の生活に自然に溶け込むサービスへと発展させていきたい。
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="arrow-outer">
+      <button id="back-to-top" class="arrow"></button>
+    </div>
+    <footer id="footer"></footer>
+    <script src="/assets/js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+      const screensSwiper = new Swiper(".screens__slider", {
+        loop: true,
+
+        keyboard: {
+          enabled: true,
+        },
+
+        navigation: {
+          nextEl: ".screens__slider .swiper-button-next",
+          prevEl: ".screens__slider .swiper-button-prev",
+        },
+
+        breakpoints: {
+          769: {
+            enabled: false,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
